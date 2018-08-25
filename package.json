@@ -6,7 +6,8 @@
   "scripts": {
     "build:prod": "webpack -p",
     "build:dev": "webpack -d",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "lint": "tslint -c ./tslint.json './src/**/*.ts*'"
   },
   "keywords": [],
   "author": "",
@@ -28,11 +29,31 @@
   "devDependencies": {
     "@types/react": "^16.4.11",
     "@types/react-dom": "^16.0.7",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
     "redux-devtools": "^3.4.1",
     "redux-logger": "^3.0.6",
     "ts-loader": "^4.5.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,ts}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
