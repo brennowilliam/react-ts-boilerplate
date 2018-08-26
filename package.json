@@ -4,8 +4,11 @@
   "description": "A simple skeleton to start a react app.",
   "main": "index.js",
   "scripts": {
-    "build:prod": "webpack -p",
-    "build:dev": "webpack -d",
+    "webpack": "webpack",
+    "build:prod": "npm run webpack -- --mode production",
+    "build:dev": "npm run webpack -- --mode development --watch",
+    "prod:debug": "npm run debug -- --mode production",
+    "dev:debug": "npm run debug -- --mode debug",
     "start:dev": "webpack-dev-server",
     "lint": "tslint -c ./tslint.json './src/**/*.ts*'"
   },

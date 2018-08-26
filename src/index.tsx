@@ -3,6 +3,6 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 // Components
-import { Home } from './components/Home'
+import App from './components/App'
 
-ReactDOM.render(<Home name="Brenno" />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
