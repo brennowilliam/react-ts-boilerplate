@@ -2,7 +2,19 @@
   "defaultSeverity": "error",
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "jsRules": {},
-  "rules": {},
+  "rules": {
+    "adjacent-overload-signatures": true,
+    "member-ordering": true,
+    "no-empty-interface": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "max-classes-per-file": false,
+    "object-literal-sort-keys": false,
+    "trailing-comma": false,
+    "arrow-parens": false,
+    "no-console": false,
+    "interface-name": false,
+    "semicolon": false
+  },
   "rulesDirectory": [],
   "linterOptions": {
     "exclude": ["**/*.js", "./node_modules/**/*"]

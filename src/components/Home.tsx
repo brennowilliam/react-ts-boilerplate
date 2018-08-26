@@ -6,6 +6,10 @@ interface HomeProps {
 
 export class Home extends React.Component<HomeProps> {
   public render() {
+    const obj = {
+      zmb: 'nada',
+      a: 'ronaldo',
+    }
     return <div>Hello {this.props.name}, How's it going?</div>
   }
 }
