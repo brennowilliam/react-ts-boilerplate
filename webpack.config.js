@@ -1,13 +1,16 @@
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
-    filename: "./dist/bundle.js"
+    filename: './dist/bundle.js',
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
-    rules: [{ test: /\.tsx?$/, loader: "ts-loader" }]
-  }
-};
+    rules: [
+      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { test: /\.css$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+    ],
+  },
+}
