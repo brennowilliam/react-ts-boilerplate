@@ -7,10 +7,9 @@
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",
     "prod": "npm run webpack -- --env.mode production",
-    "dev": "npm run webpack-dev-server -- --env.mode development",
+    "dev": "npm run webpack-dev-server -- --env.mode development --hot",
     "prod:debug": "npm run debug -- --env.mode production",
     "dev:debug": "npm run debug -- --env.mode debug",
-    "start:dev": "webpack-dev-server",
     "lint": "tslint -c ./tslint.json './src/**/*.ts*'"
   },
   "keywords": [],

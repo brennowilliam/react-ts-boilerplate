@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
-const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)
+const modeConfig = env => require(`./build-utils/webpack.${env}.ts`)(env)
 const webpackMerge = require('webpack-merge')
 
 module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
@@ -15,13 +15,13 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
       resolve: {
         extensions: ['.ts', '.tsx', '.js'],
       },
-      module: {
-        rules: [
-          { test: /\.tsx?$/, loader: 'ts-loader' },
-          { test: /\.css$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-        ],
-      },
-      plugins: [new webpack.ProgressPlugin()],
+      plugins: [
+        new HtmlWebpackPlugin({
+          title: 'React-Ts',
+          filename: 'dist/index.html',
+        }),
+        new webpack.ProgressPlugin(),
+      ],
     },
     modeConfig(mode)
   )

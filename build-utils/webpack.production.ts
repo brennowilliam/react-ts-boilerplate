@@ -1,5 +1,15 @@
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = () => ({
-  output: {
-    filename: '[chunkhash].js',
-  },
+  // plugins: [new MiniCssExtractPlugin()],
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.css$/,
+  //       use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader'],
+  //     },
+  //   ],
+  // },
+  // output: {
+  //   filename: '[chunkhash].js',
+  // },
 })
