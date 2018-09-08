@@ -1,7 +1,7 @@
 // Libs
 import * as React from 'react'
 
-import '../test.css'
+import '../test.scss'
 
 interface IApp {}
 

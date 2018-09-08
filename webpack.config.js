@@ -11,7 +11,7 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
       output: {
         filename: './dist/bundle.js',
       },
-      devtool: 'source-map',
+      // devtool: 'source-map',
       resolve: {
         extensions: ['.ts', '.tsx', '.js'],
       },
